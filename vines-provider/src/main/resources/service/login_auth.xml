@@ -11,11 +11,6 @@
 		http://code.alibabatech.com/schema/dubbo/dubbo.xsd"
 	default-lazy-init="false">
 
-	<dubbo:application name="vines-provider"/>
-	<!--不知道是否与context-annotation冲突，待验证-->
-<!--
-	<dubbo:annotation/>
--->
-	<dubbo:registry address="multicast://224.5.6.7:1234"/>
-	<dubbo:protocol name="dubbo" port="20880" />
+	<dubbo:service interface="com.vines.service.IHelloWorldService" ref="helloWorldService"/>
+
 </beans>

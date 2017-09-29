@@ -1,9 +1,10 @@
 package com.vines.mybatis.pojo;
 
-import javax.annotation.Resource;
+import org.springframework.stereotype.Component;
+
 import java.io.Serializable;
 
-@Resource
+@Component
 public class User implements Serializable{
 	
 	/**

@@ -13,7 +13,7 @@
 		<property name="configLocation"  value="classpath:mybatis/conf/mybatis-config.xml"/>
 		<property name="dataSource" ref="dataSource_druid"/>
 		<property name="environment" value="development"/>
-		<property name="typeAliasesPackage" value="com.starsh.mybatis.pojo"/>
+		<property name="typeAliasesPackage" value="com.vines.mybatis.pojo"/>
 		<!-- 定义插件，目的是做分页用-->
 		<property name="plugins">
 			<array>
