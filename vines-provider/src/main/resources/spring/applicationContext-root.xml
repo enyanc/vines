@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context-3.0.xsd"
+	default-lazy-init="false">
+
+
+
+	<!-- 导入通用配置信息 -->
+	<import resource="classpath:spring/applicationContext-common.xml"/>
+	<!-- 导入数据库配置信息 -->
+	<import resource="classpath:spring/applicationContext-db.xml"/>
+	<!-- 导入mybatis配置信息-->
+	<import resource="classpath:spring/applicationContext-mybatis.xml"/>
+	<!--导入dubbo配置信息-->
+	<import resource="classpath:spring/applicationContext-dubbo.xml"/>
+</beans>
