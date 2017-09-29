@@ -11,11 +11,15 @@
 		http://code.alibabatech.com/schema/dubbo/dubbo.xsd"
 	default-lazy-init="false">
 
+	<!-- 提供方应用信息，用于计算依赖关系 -->
 	<dubbo:application name="vines-provider"/>
-	<!--不知道是否与context-annotation冲突，待验证-->
-<!--
-	<dubbo:annotation/>
--->
+
+	<!-- 使用multicast广播注册中心暴露服务地址 -->
 	<dubbo:registry address="multicast://224.5.6.7:1234"/>
+
+	<!-- 用dubbo协议在20880端口暴露服务 -->
 	<dubbo:protocol name="dubbo" port="20880" />
+
+
+
 </beans>
