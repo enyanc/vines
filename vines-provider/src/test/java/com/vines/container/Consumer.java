@@ -8,7 +8,7 @@ import com.vines.service.IHelloWorldService;
 public class Consumer {
 
     public static void main(String[] args) {
-        ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext(new String[]{"service/dubbo-demo-consumer.xml"});
+        ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext(new String[]{"dubbo-demo-consumer.xml"});
         context.start();
 
         IHelloWorldService demoService = (IHelloWorldService) context.getBean("demoService"); // 获取远程服务代理
