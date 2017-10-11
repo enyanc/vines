@@ -1,7 +1,7 @@
 package com.vines.container;
 
 import org.springframework.context.support.ClassPathXmlApplicationContext;
-import com.vines.service.IHelloWorldService;
+
 /**
  * Created by ken.lj on 2017/7/31.
  */

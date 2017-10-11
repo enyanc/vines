@@ -18,6 +18,12 @@
     <dependencies>
         <dependency>
             <groupId>com.vines</groupId>
+            <artifactId>vines-api</artifactId>
+            <version>1.0.0</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.vines</groupId>
             <artifactId>vines-dao</artifactId>
             <version>1.0.0</version>
         </dependency>

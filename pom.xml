@@ -19,6 +19,7 @@
         <module>vines-provider</module>
         <module>vines-dao</module>
         <module>vines-consumer</module>
+        <module>vines-api</module>
     </modules>
 
     <properties>
