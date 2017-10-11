@@ -9,7 +9,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 public class Consumer {
 
     public static void main(String[] args) {
-        ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext(new String[]{"classpath:spring/applicationContext-root.xml"});
+        ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext(new String[]{"classpath:spring/applicationContext-dubbo-consumer.xml"});
         context.start();
 
         IHelloWorldService demoService = (IHelloWorldService) context.getBean("demoService"); // 获取远程服务代理

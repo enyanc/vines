@@ -4,6 +4,7 @@ import com.github.pagehelper.PageInfo;
 import com.vines.mybatis.dao.UserDao;
 import com.vines.mybatis.db.Page;
 import com.vines.mybatis.pojo.User;
+import com.vines.service.IHelloWorldService;
 import net.sf.json.JSONArray;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
