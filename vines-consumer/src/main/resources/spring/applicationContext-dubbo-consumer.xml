@@ -12,12 +12,11 @@
 	default-lazy-init="false">
 
 	<!-- 消费方应用名，用于计算依赖关系，不是匹配条件，不要与提供方一样 -->
-	<dubbo:application name="demo-consumer"/>
+	<dubbo:application name="demo-consumer" logger="slf4j"/>
 
 	<!-- 使用multicast广播注册中心暴露发现服务地址 -->
 <!--
 	<dubbo:registry address="multicast://224.5.6.7:1234"/>
 -->
-	<dubbo:reference id="demoService" check="false" interface="com.vines.service.IHelloWorldService"  url="dubbo://localhost:20880"  />
 
 </beans>

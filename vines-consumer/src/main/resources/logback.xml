@@ -45,7 +45,7 @@
     <logger name="druid.sql.PreparedStatement" level="DEBUG"/>
     <logger name="druid.sql.ResultSet" level="DEBUG"/>
     <logger name="com.vines.mybatis" level="DEBUG"/>-->
-<!--    <logger name="com.alibaba" level="DEBUG"/>-->
+    <logger name="com.alibaba.dubbo" level="DEBUG"/>
 
 
     <root level="DEBUG">
