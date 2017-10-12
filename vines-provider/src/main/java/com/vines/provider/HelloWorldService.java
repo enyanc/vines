@@ -20,12 +20,13 @@ public  class HelloWorldService implements IHelloWorldService {
     private UserDao userDao;
     @Override
     public String sayHello() {
-        Page page=new Page();
-        page.setPageSize(10);
-        page.setPageNum(1);
-        PageInfo pageInfo= (PageInfo) userDao.selectPageList(new User(),page);
-        logger.info(pageInfo+"==================================");
-        List<User> list=pageInfo.getList();
-        return JSONArray.fromObject(list).toString();
+//        Page page=new Page();
+//        page.setPageSize(10);
+//        page.setPageNum(1);
+//        PageInfo pageInfo= (PageInfo) userDao.selectPageList(new User(),page);
+//        logger.info(pageInfo+"==================================");
+//        List<User> list=pageInfo.getList();
+//        return JSONArray.fromObject(list).toString();
+        return "hello world";
     }
 }

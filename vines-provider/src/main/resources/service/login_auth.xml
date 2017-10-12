@@ -11,6 +11,6 @@
 		http://code.alibabatech.com/schema/dubbo/dubbo.xsd"
 	default-lazy-init="false">
 
-	<dubbo:service  interface="com.vines.service.IHelloWorldService" ref="helloWorldService"/>
+	<dubbo:service  interface="com.vines.service.IHelloWorldService" ref="helloWorldService" registry="N/A" />
 
 </beans>
