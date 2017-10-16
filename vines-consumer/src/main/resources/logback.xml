@@ -8,14 +8,16 @@
     <contextName>${APP_Name}</contextName>
 
     <appender name="console" class="ch.qos.logback.core.ConsoleAppender">
+<!--
        <Encoding>UTF-8</Encoding>
+-->
         <encoder>
             <pattern>[%-5level] %d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %logger{36} - %msg%n</pattern>
         </encoder>
     </appender>
 
 
-    <appender name="file" class="ch.qos.logback.core.rolling.RollingFileAppender">
+   <!-- <appender name="file" class="ch.qos.logback.core.rolling.RollingFileAppender">
         <Encoding>UTF-8</Encoding>
         <File>/home/test.log</File>
         <append>true</append>
@@ -30,7 +32,7 @@
             <pattern>[%-5level] %d{HH:mm:ss.SSS} [%thread] %logger{36} - %msg%n
             </pattern>
         </layout>
-    </appender>
+    </appender>-->
 
 
     <logger name="org.springframework" level="DEBUG"/>

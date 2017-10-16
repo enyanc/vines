@@ -20,10 +20,10 @@
 
 -->
 
-	<dubbo:protocol name="rest" port="8888" server="tomcat" />
+	<!--<dubbo:protocol name="rest" port="8888" server="tomcat" />
 
 	<dubbo:service interface="com.vines.service.rest.RestUserService" ref="restUserService"  registry="N/A"/>
 
-	<bean id="restUserService" class="com.vines.service.rest.RestUserServiceImp"/>
+	<bean id="restUserService" class="com.vines.service.rest.RestUserServiceImp"/>-->
 
 </beans>
