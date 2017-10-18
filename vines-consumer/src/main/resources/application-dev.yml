@@ -1,0 +1,16 @@
+server:
+    address: 127.0.0.1
+    port: 8443
+#    ssl:
+#      key-store: classpath:.keystore
+#      key-store-password: 123456
+#      keyStoreType: jks
+#      keyAlias: tomcat
+#      key-password: 123456
+system:
+    name: hello-dev
+    age:  11
+
+
+
+
