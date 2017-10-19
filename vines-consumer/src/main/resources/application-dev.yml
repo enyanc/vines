@@ -10,6 +10,7 @@ server:
 system:
     name: hello-dev
     age:  11
+spring.jackson.serialization.WRAP_ROOT_VALUE: true
 
 
 
