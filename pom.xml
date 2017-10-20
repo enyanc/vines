@@ -40,6 +40,7 @@
         <file_encoding>UTF-8</file_encoding>
 
         <skip_maven_deploy>false</skip_maven_deploy>
+        <zkclient_version>0.2</zkclient_version>
     </properties>
 
 
@@ -214,7 +215,13 @@
                 <version>${github_pagehelper_version}</version>
             </dependency>
 
+            <dependency>
+                <groupId>com.101tec</groupId>
+                <artifactId>zkclient</artifactId>
+                <version>${zkclient_version}</version>
+            </dependency>
         </dependencies>
+
 
 
     </dependencyManagement>

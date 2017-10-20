@@ -18,14 +18,15 @@ import java.util.List;
 @EnableConfigurationProperties(SystemProperties.class)
 public class RestUserServiceImp implements RestUserService {
 
-//    @Autowired
-//    IHelloWorldService demoService;
+    @Autowired
+    IHelloWorldService demoService;
 
     @Autowired
     SystemProperties systemProperties;
 
     @RequestMapping("/")
     public String sayUser() {
+        System.out.println(demoService.sayHello()+"==================================");
         System.out.println(systemProperties.getAge()+"====================="+systemProperties.getName());
 //        return demoService.sayHello();
         return "hhhhhh";
@@ -35,6 +36,7 @@ public class RestUserServiceImp implements RestUserService {
 
     @RequestMapping(value="/single",method = RequestMethod.POST)
     public Todo getTodos(@RequestBody Todo todo) {
+        System.out.println(demoService.sayHello()+"==================================");
         System.out.println(todo.getDesc()+"=========================================");
         Todo item1 = new Todo();
         item1.setId("1");
