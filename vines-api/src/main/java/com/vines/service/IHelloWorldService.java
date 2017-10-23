@@ -1,6 +1,7 @@
 package com.vines.service;
 
-import com.vines.mybatis.pojo.User;
+
+import com.vines.domain.User;
 
 import java.util.List;
 

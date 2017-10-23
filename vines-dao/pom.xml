@@ -16,6 +16,13 @@
 
 
     <dependencies >
+
+        <dependency>
+            <groupId>com.vines</groupId>
+            <artifactId>vines-api</artifactId>
+            <version>1.0.0</version>
+        </dependency>
+
         <dependency>
             <groupId>org.mybatis</groupId>
             <artifactId>mybatis-spring</artifactId>

@@ -1,8 +1,8 @@
 package com.vines.container;
 
+import com.vines.domain.User;
 import com.vines.service.IHelloWorldService;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
-import com.vines.mybatis.pojo.User;
 
 import java.util.List;
 
