@@ -18,6 +18,16 @@
         <dependency>
             <groupId>com.vines</groupId>
             <artifactId>vines-api</artifactId>
+            <exclusions>
+                <exclusion>
+                        <groupId>org.slf4j</groupId>
+                        <artifactId>log4j-over-slf4j</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>org.slf4j</groupId>
+                    <artifactId>slf4j-jcl</artifactId>
+                </exclusion>
+            </exclusions>
             <version>1.0.0</version>
         </dependency>
 

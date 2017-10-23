@@ -12,6 +12,6 @@
 	default-lazy-init="false">
 
 	<!-- 生成远程服务代理，可以和本地bean一样使用demoService -->
-	<dubbo:reference id="demoService" check="false" interface="com.vines.service.IHelloWorldService"  />
+	<dubbo:reference id="demoService" check="true" interface="com.vines.service.IHelloWorldService"  />
 
 </beans>

@@ -29,4 +29,15 @@ public  class HelloWorldService implements IHelloWorldService {
         return JSONArray.fromObject(list).toString();
 //        return "hello world";
     }
+
+    @Override
+    public List<User>  sayUser(){
+        Page page=new Page();
+        page.setPageSize(10);
+        page.setPageNum(1);
+        PageInfo pageInfo= (PageInfo) userDao.selectPageList(new User(),page);
+        logger.info(pageInfo+"==================================");
+        List<User> list=pageInfo.getList();
+        return list;
+    }
 }

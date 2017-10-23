@@ -12,15 +12,11 @@
 	default-lazy-init="false">
 
 	<!-- 消费方应用名，用于计算依赖关系，不是匹配条件，不要与提供方一样 -->
-	<dubbo:application name="demo-consumer" logger="slf4j"/>
+	<dubbo:application name="vines-consumer" logger="slf4j"/>
 
 	<!-- 使用multicast广播注册中心暴露发现服务地址 -->
 	<dubbo:registry address="zookeeper://127.0.0.1:2181"/>
 
-	<!--<dubbo:protocol name="rest" port="8888" server="tomcat" />
-
-	<dubbo:service interface="com.vines.service.rest.RestUserService" ref="restUserService"  registry="N/A"/>
-
-	<bean id="restUserService" class="com.vines.service.rest.RestUserServiceImp"/>-->
+	<dubbo:monitor protocol="registry"/>
 
 </beans>

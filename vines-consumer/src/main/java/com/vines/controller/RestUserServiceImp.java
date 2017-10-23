@@ -25,11 +25,11 @@ public class RestUserServiceImp implements RestUserService {
     SystemProperties systemProperties;
 
     @RequestMapping("/")
-    public String sayUser() {
+    public List<com.vines.mybatis.pojo.User>  sayUser() {
         System.out.println(demoService.sayHello()+"==================================");
         System.out.println(systemProperties.getAge()+"====================="+systemProperties.getName());
-//        return demoService.sayHello();
-        return "hhhhhh";
+        List<com.vines.mybatis.pojo.User> list=demoService.sayUser();
+        return list;
 
     }
 
@@ -68,6 +68,7 @@ public class RestUserServiceImp implements RestUserService {
         todos.add(item2);
         return todos;
     }
+
 
 
 }
