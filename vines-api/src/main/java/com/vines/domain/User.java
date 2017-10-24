@@ -17,8 +17,19 @@ public class User implements Serializable{
 	private int id;
 	private String name;
 	private String sex;
-	
+	private int age;
+
+
+	public int getAge() {
+		return age;
+	}
+
+	public void setAge(int age) {
+		this.age = age;
+	}
+
 	public User() {
+
 		super();
 	}
 	public User(String name, String sex) {

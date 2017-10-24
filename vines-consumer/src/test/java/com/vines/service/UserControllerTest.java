@@ -23,7 +23,7 @@ public class UserControllerTest {
 //            .append("\"desc\":\"hello\"}");
     String data = builder.toString();
     System.out.println(data);
-    String url = "http://localhost:8443/todos.json";
+    String url = "http://localhost:8443/single.xml";
     CloseableHttpClient httpClient = HttpClients.createDefault();
     HttpPost httpPost = new HttpPost(url);
     httpPost.setEntity(new StringEntity(data, "text/xml","utf-8"));

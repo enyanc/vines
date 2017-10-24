@@ -1,9 +1,13 @@
 package com.vines.domain;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonRootName;
+import com.fasterxml.jackson.core.sym.Name;
+import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlRootElement;
 
+import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 import java.util.List;
 
@@ -16,7 +20,8 @@ public class Todo {
     private boolean completed;
     private String desc;
     private User user;
-    private List<User> userList;
+    @JacksonXmlProperty(localName="userList")
+    private List<User> list;
 
     public Todo() {
     }
@@ -59,11 +64,11 @@ public class Todo {
         this.user = user;
     }
 
-    public List<User> getUserList() {
-        return userList;
+    public List<User> getList() {
+        return list;
     }
 
-    public void setUserList(List<User> userList) {
-        this.userList = userList;
+    public void setList(List<User> userList) {
+        this.list = userList;
     }
 }

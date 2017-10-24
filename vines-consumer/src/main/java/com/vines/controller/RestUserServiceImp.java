@@ -1,14 +1,14 @@
 package com.vines.controller;
 
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.vines.config.SystemProperties;
 import com.vines.domain.Todo;
 import com.vines.domain.User;
+import com.vines.domain.UserFacade;
 import com.vines.service.IHelloWorldService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
-import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
@@ -24,12 +24,13 @@ public class RestUserServiceImp implements RestUserService {
     @Autowired
     SystemProperties systemProperties;
 
-    @RequestMapping("/")
-    public List<com.vines.domain.User>  sayUser() {
+    @RequestMapping("/a")
+    public List<User>  sayUser() {
         System.out.println(demoService.sayHello()+"==================================");
         System.out.println(systemProperties.getAge()+"====================="+systemProperties.getName());
-        List<com.vines.domain.User> list=demoService.sayUser();
-        return list;
+        List<com.vines.domain.User> userList
+                =demoService.sayUser();
+        return userList;
 
     }
 
@@ -39,6 +40,7 @@ public class RestUserServiceImp implements RestUserService {
         System.out.println(demoService.sayHello()+"==================================");
         System.out.println(todo.getDesc()+"=========================================");
         Todo item1 = new Todo();
+        List<User> list=new ArrayList<User>();
         item1.setId("1");
         item1.setCompleted(false);
         item1.setDesc("go swimming");
@@ -46,9 +48,10 @@ public class RestUserServiceImp implements RestUserService {
         user.setAge(11);
         user.setName("how are you");
         item1.setUser(user);
-        List<User> list=new ArrayList<User>();
         list.add(user);
-        item1.setUserList(list);
+//        List<User> userList
+//                =demoService.sayUser();
+        item1.setList(list);
         return item1;
     }
 
@@ -67,6 +70,15 @@ public class RestUserServiceImp implements RestUserService {
         item2.setDesc("go for lunch");
         todos.add(item2);
         return todos;
+    }
+
+
+    @RequestMapping("/list")
+    public UserFacade sayUserHello() {
+        List<User> userList =demoService.sayUser();
+        UserFacade facade=new UserFacade();
+        facade.setUserList(userList);
+        return facade;
     }
 
 
